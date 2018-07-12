@@ -1,4 +1,3 @@
-import { AsadoService } from './../shared/asado.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 

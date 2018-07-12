@@ -10,7 +10,7 @@ import { take, map } from 'rxjs/operators';
 })
 export class AsadoDetailComponent implements OnInit {
   asadoId = null;
-  asado = { name : '', price: null };
+  asado;
   constructor(private _store: AngularFirestore,
      private _router: Router,
      private _route: ActivatedRoute) { }

@@ -1,16 +1,28 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CdkTableModule } from '@angular/cdk/table';
 import {
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
 } from '@angular/material';
+
+let modules = [
+  MatCardModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule
+];
 
 @NgModule({
   imports: [
-    MatCardModule
+    modules
   ],
   exports: [
-    MatCardModule
+    modules
   ],
 })
 export class MaterialModule { }

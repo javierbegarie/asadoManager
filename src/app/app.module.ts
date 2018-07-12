@@ -9,10 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AsadoItemComponent } from './asado-list/asado-item/asado-item.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MaterialModule } from './app-material';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,15 +34,12 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
       storageBucket: "asado-manager.appspot.com",
       messagingSenderId: "451689966916"
     }),
+    AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
